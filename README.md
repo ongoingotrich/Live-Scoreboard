@@ -4,6 +4,19 @@ Live scoreboard for streaming software's.  Free and open source
 Live-Scoreboard-
 A free open source live scoreboard for OBS and other streaming software’s. Customizable and easy to use/set up. Change Teams, Points, Games/timeouts and colors.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+To use with Github (recomended method) 
+
+Open your streaming software and add a new browser source. Set the resolution to 1920/1080. Make the browser source link https://ongoingotrich.github.io/Live-Scoreboard/index.html
+
+Now you need to go to “view” under obs and select docs. Under that select “custom browser docs” and add a new one with what ever name you want and with this link https://ongoingotrich.github.io/Live-Scoreboard/control.html
+
+now your done!!
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+VSC method
+
 To use start by clicking the greed code button at the top of this page. Select download as zip.
 
 To use it must be injected into a live webserver. You can add it to your own webserver or if you do not have one download visualstudiocode at https://code.visualstudio.com/
