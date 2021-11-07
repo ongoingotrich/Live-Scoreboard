@@ -7,7 +7,7 @@ A free open source live scoreboard for OBS and other streaming software’s. Cus
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 To use with Github (recomended method) 
 
-Open your streaming software and add a new browser source. Set the resolution to 1920/1080. Make the browser source link https://ongoingotrich.github.io/Live-Scoreboard/index.html
+Open your streaming software and add a new browser source. Set the resolution to 1920/1080. Make the browser source link https://ongoingotrich.github.io/Live-Scoreboard/index.html  (viewing in a regular browser with github sites seems to break some of the css. Dont worry it will display much nice and different in OBS)
 
 Now you need to go to “view” under obs and select docs. Under that select “custom browser docs” and add a new one with what ever name you want and with this link https://ongoingotrich.github.io/Live-Scoreboard/control.html
 
