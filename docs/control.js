@@ -1,14 +1,24 @@
 let ButtonS1 = document.getElementById("S1");
 let ButtonS2 = document.getElementById("S2");
-let Reset = document.getElementById("Reset");
+let ButtonMS1= document.getElementById("SM1");
+let ButtonMS2= document.getElementById("SM2");
+let Reset1 = document.getElementById("Reset1");
+let Reset2 = document.getElementById("Reset2");
 let ButtonG1 = document.getElementById("G1");
 let ButtonG2 = document.getElementById("G2");
-let ResetG = document.getElementById("ResetG");
+let ButtonMG1= document.getElementById("GM1");
+let ButtonMG2= document.getElementById("GM1");
+let ResetG1 = document.getElementById("ResetG1");
+let ResetG2 = document.getElementById("ResetG2");
+let ResetA = document.getElementById("ResetA");
+
 
 let Score1 = 0;
 let Score2 = 0;
 let Games1 = 0;
 let Games2 = 0;
+
+
 
 localStorage.setItem('S1', Score1);
 localStorage.setItem('S2', Score2);
@@ -19,6 +29,26 @@ localStorage.setItem('G2', Games2);
 ButtonS1.addEventListener("click", function() {
     Score1 = Score1 + 1;
     localStorage.setItem('S1', Score1);
+});
+
+ButtonMS1.addEventListener("click", function() {
+    Score1 = Score1 - 1;
+    localStorage.setItem('S1', Score1);
+});
+
+ButtonMS2.addEventListener("click", function() {
+    Score2 = Score2 - 1;
+    localStorage.setItem('S2', Score2);
+});
+
+ButtonMG2.addEventListener("click", function() {
+    Games2 = Games2 - 1;
+    localStorage.setItem('G2', Games2);
+});
+
+ButtonMG1.addEventListener("click", function() {
+    Games1 = Games1 - 1;
+    localStorage.setItem('G1', Games1);
 });
 
 ButtonG1.addEventListener("click", function() {
@@ -36,19 +66,39 @@ ButtonG2.addEventListener("click", function() {
     localStorage.setItem('G2', Games2);
 });
 
-Reset.addEventListener("click", function() {
+Reset1.addEventListener("click", function() {
+    Score1 = 0
+    localStorage.setItem('S1', Score1);
+});
+
+Reset2.addEventListener("click", function() {
+    Score2 = 0
+    
+    localStorage.setItem('S2', Score2);
+});
+
+ResetG1.addEventListener("click", function() {
+    Games1 = 0
+    localStorage.setItem('G1', Games1);
+});
+
+ResetG2.addEventListener("click", function() {
+    Games2 = 0
+    localStorage.setItem('G2', Games2);
+});
+
+ResetA.addEventListener("click", function() {
+    Games2 = 0
+    Games1 = 0
     Score2 = 0
     Score1 = 0
+    localStorage.setItem('G2', Games2);
+    localStorage.setItem('G1', Games1);
     localStorage.setItem('S2', Score2);
     localStorage.setItem('S1', Score1);
 });
 
-ResetG.addEventListener("click", function() {
-    Games2 = 0
-    Games1 = 0
-    localStorage.setItem('G2', Games2);
-    localStorage.setItem('G1', Games1);
-});
+
 
 function passvalues(){
     
@@ -67,6 +117,18 @@ function passvalues2(){
     return false;
 
 }
+
+function passcolor(){
+    
+    var color2 = document.getElementById("colorTwo").value;
+    localStorage.setItem("C2",color2);
+    
+    return false;
+
+}
+
+
+
 
 
 // Simple example, see optional options for more configuration.
@@ -117,7 +179,7 @@ pickr.on('change', (color, source, instance) => {
     const rgbaColor = color.toRGBA().toString();
     console.log(rgbaColor)
     localStorage.setItem("C1",rgbaColor);
-    localStorage.setItem("C2",rgbaColor);
+    
     
 
     

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="control.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/>
 
     <title>Control</title>
@@ -16,47 +16,49 @@
 <body>
     <div class="Team-One">
         <h2 class="Left">Left</h2>
-        
         <form>
         <input class="input" type="text" id="text" placeholder="Team/Player"/> 
-        <input class="button1" type="submit" value="Set" onclick="passvalues();"/>
+        <input class="button" type="submit" value="Set" onclick="passvalues();"/>
         </form>
-        
-        
-
-        
-
-        <button class="button"  id="S1">Score+1</button>
-        <button class="button"  id="G1">Games+1</button>
+        <div class="controls">
+        <button class="buttonP"  id="S1">Score+1</button>
+        <button class="buttonM"  id="SM1">Score-1</button>
+        <button class="buttonP"  id="G1">Games+1</button>
+        <button class="buttonM"  id="GM1">Games-1</button>
+        <button class="button"  id="Reset1">Reset Score</button>
+        <button class="button"  id="ResetG1">Reset Games</button>
+        </div>
     </div> 
     <div class="Team-Two">
-        <h2>Right</h2>
+        <h2 class="right">Right</h2>
         <form>
             <input class="input" type="text" id="text2" placeholder="Team/Player"/> 
-            <input class="button1" type="submit" value="Set" onclick="passvalues2();"/>
+            <input class="button" type="submit" value="Set" onclick="passvalues2();"/>
             </form>
-        <button class="button" id="S2">Score+1</button>
-        <button class="button"  id="G2">Games+1</button>
+            <div class="controls">
+        <button class="buttonP" id="S2">Score+1</button>
+        <button class="buttonM"  id="SM2">Score-1</button>
+        <button class="buttonP"  id="G2">Games+1</button>
+        <button class="buttonM"  id="GM2">Games-1</button>
+        <button class="button"  id="Reset2">Reset Score</button>
+        <button class="button"  id="ResetG2">Reset Games</button>
     </div>
-    <div class="reset">
-    <h2>Reset</h2>
-    <button class="button"  id="Reset">ResetScore</button>
-    <button class="button"  id="ResetG">ResetGames</button>
     </div>
 
     <div class="reset">
-        <h2>UI Color</H2>
-
+        <h2>Advanced</H2>
+        
+            <button class="button"  id="ResetA">Reset All</button>
+            <h3>Teams Colors</h3>
           <div class="color-picker"></div>
 
-   
-    
-
+          <h3>Games Color </h3>
+          <form>
+            <input class="input2" type="text" id="colorTwo" placeholder="RGBA "/> 
+            <input class="button" type="submit" value="Set" onclick="passcolor();"/>
+            </form>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
     <script src="./control.js"></script>
-    
-    
 </body>
 </html>
