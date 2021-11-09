@@ -20,8 +20,6 @@ let Score1 = 0;
 let Score2 = 0;
 let Games1 = 0;
 let Games2 = 0;
-let gamec = "rgba(64, 70, 67, 1)";
-let swappy = false; 
 
 
 
