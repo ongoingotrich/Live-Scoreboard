@@ -20,6 +20,8 @@ let Score1 = 0;
 let Score2 = 0;
 let Games1 = 0;
 let Games2 = 0;
+let gamec = "rgba(64, 70, 67, 1)";
+let swappy = false; 
 
 
 
@@ -29,7 +31,7 @@ localStorage.setItem('S1', Score1);
 localStorage.setItem('S2', Score2);
 localStorage.setItem('G1', Games1);
 localStorage.setItem('G2', Games2);
-
+localStorage.setItem('TC2', gamec);
 
 remove.addEventListener("click", function() {
 
