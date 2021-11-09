@@ -29,7 +29,7 @@ localStorage.setItem('S1', Score1);
 localStorage.setItem('S2', Score2);
 localStorage.setItem('G1', Games1);
 localStorage.setItem('G2', Games2);
-localStorage.setItem('TC2', gamec);
+
 
 remove.addEventListener("click", function() {
 
