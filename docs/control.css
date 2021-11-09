@@ -40,6 +40,11 @@
     width: 80px;
     height: 40px;
     margin-top: 25px;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 6px;
+    border-style: solid;
+    margin-right: 30px;
 
 }
 
@@ -53,6 +58,10 @@
     background-color: red;
     width: 80px;
     height: 40px;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 6px;
+    border-style: solid;
 }
 .buttonM:active{
     transform: translateY(4px);
@@ -69,6 +78,13 @@
     height: 40px;
     background-color: khaki;
     margin-top: 25px;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 6px;
+    border-style: solid;
+    margin-left: 10px;
+    height: auto;
+   
 }
 .button:active{
     transform: translateY(4px);

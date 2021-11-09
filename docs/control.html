@@ -21,10 +21,10 @@
         <input class="button" type="submit" value="Set" onclick="passvalues();"/>
         </form>
         <div class="controls">
-        <button class="buttonP"  id="S1">Score+1</button>
-        <button class="buttonM"  id="SM1">Score-1</button>
-        <button class="buttonP"  id="G1">Games+1</button>
-        <button class="buttonM"  id="GM1">Games-1</button>
+        <button class="buttonP remover"  id="S1">Score+1</button>
+        <button class="buttonM remover"  id="SM1">Score-1</button>
+        <button class="buttonP remover"  id="G1">Games+1</button>
+        <button class="buttonM remover"  id="GM1">Games-1</button>
         <button class="button"  id="Reset1">Reset Score</button>
         <button class="button"  id="ResetG1">Reset Games</button>
         </div>
@@ -36,10 +36,10 @@
             <input class="button" type="submit" value="Set" onclick="passvalues2();"/>
             </form>
             <div class="controls">
-        <button class="buttonP" id="S2">Score+1</button>
-        <button class="buttonM"  id="SM2">Score-1</button>
-        <button class="buttonP"  id="G2">Games+1</button>
-        <button class="buttonM"  id="GM2">Games-1</button>
+        <button class="buttonP remover" id="S2">Score+1</button>
+        <button class="buttonM remover"  id="SM2">Score-1</button>
+        <button class="buttonP remover"  id="G2">Games+1</button>
+        <button class="buttonM remover"  id="GM2">Games-1</button>
         <button class="button"  id="Reset2">Reset Score</button>
         <button class="button"  id="ResetG2">Reset Games</button>
     </div>
@@ -60,8 +60,13 @@
 
             <h3>Use this for rgb values. it does nothing exept give you a value you can copy</h3>
             <div class="color-picker"></div>
+            
+
+            <button class="button"  id="remove">Hide Minus buttons</button>
+            <button class="button"  id="show" >Show Minus buttons</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
     <script src="./control.js"></script>
+    
 </body>
 </html>

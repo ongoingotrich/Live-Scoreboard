@@ -1,9 +1,11 @@
 
 
 
+
 function reload(){
+    
     var color = localStorage.getItem("C1");
-    var color2 = localStorage.getItem("C2");
+    var gamec = localStorage.getItem("TC2");
  document.getElementById('scoreOne').innerHTML = localStorage.getItem('S1');
  document.getElementById('scoreTwo').innerHTML = localStorage.getItem('S2');
 
@@ -13,8 +15,8 @@ function reload(){
  document.getElementById('teamTwo').innerHTML = localStorage.getItem('T2');
  document.getElementById('teamOne').style.backgroundColor = color
  document.getElementById('teamTwo').style.backgroundColor = color
- document.getElementById('gamesOne').style.backgroundColor = color2
- document.getElementById('gamesTwo').style.backgroundColor = color2
+ document.getElementById('gamesOne').style.backgroundColor = gamec
+ document.getElementById('gamesTwo').style.backgroundColor = gamec
  document.getElementById('scoreOne').style.backgroundColor = color
  document.getElementById('scoreTwo').style.backgroundColor = color
  
@@ -27,6 +29,7 @@ function reload(){
 
  
 } setInterval ('reload()', 1)
+
 
 
 

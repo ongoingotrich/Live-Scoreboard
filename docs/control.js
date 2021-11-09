@@ -11,12 +11,19 @@ let ButtonMG2= document.getElementById("GM1");
 let ResetG1 = document.getElementById("ResetG1");
 let ResetG2 = document.getElementById("ResetG2");
 let ResetA = document.getElementById("ResetA");
+let remove = document.getElementById("remove");
+let show = document.getElementById("show");
+
 
 
 let Score1 = 0;
 let Score2 = 0;
 let Games1 = 0;
 let Games2 = 0;
+let gamec = "rgba(64, 70, 67, 1)";
+let swappy = false; 
+
+
 
 
 
@@ -24,6 +31,26 @@ localStorage.setItem('S1', Score1);
 localStorage.setItem('S2', Score2);
 localStorage.setItem('G1', Games1);
 localStorage.setItem('G2', Games2);
+localStorage.setItem('TC2', gamec);
+
+remove.addEventListener("click", function() {
+
+        var myobj = document.getElementById("SM1");
+        var myobj2 = document.getElementById("SM2");
+        var myobj3 = document.getElementById("GM1");
+        var myobj4 = document.getElementById("GM2");
+        myobj.remove();
+        myobj2.remove();
+        myobj3.remove();
+        myobj4.remove();
+      
+});
+
+show.addEventListener("click", function() {
+    location.reload();
+});
+
+
 
 
 ButtonS1.addEventListener("click", function() {
@@ -97,7 +124,8 @@ ResetA.addEventListener("click", function() {
     localStorage.setItem('S2', Score2);
     localStorage.setItem('S1', Score1);
 });
-
+let team1 = document.getElementById("text").value;
+let team2 = document.getElementById("text2").value;
 
 
 function passvalues(){
@@ -120,12 +148,16 @@ function passvalues2(){
 
 function passcolor(){
     
-    var color2 = document.getElementById("colorTwo").value;
-    localStorage.setItem("C2",color2);
+    var gamec = document.getElementById("colorTwo").value;
+    localStorage.setItem("TC2",gamec);
     
     return false;
 
 }
+
+
+
+
 
 
 
@@ -191,7 +223,7 @@ pickr.on('change', (color, source, instance) => {
 const pickr2 = Pickr.create({
     el: '.color-picker',
     theme: 'classic', // or 'monolith', or 'nano'
-    default: 'rgba(255, 17, 0, 1)',
+    default: 'rgba(0, 81, 255, 1)',
 
     swatches: [
         'rgba(255, 17, 0, 1)',
@@ -225,6 +257,7 @@ const pickr2 = Pickr.create({
             hsva: false,
             cmyk: false,
             input: true,
+            default: true,
            
         }
     }
