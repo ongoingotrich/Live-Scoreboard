@@ -13,6 +13,8 @@ function reload(){
  document.getElementById('gamesTwo').innerHTML = localStorage.getItem('G2');
  document.getElementById('teamOne').innerHTML = localStorage.getItem('T1');
  document.getElementById('teamTwo').innerHTML = localStorage.getItem('T2');
+ document.getElementById('teamOne').innerHTML = localStorage.getItem('T3');
+ document.getElementById('teamTwo').innerHTML = localStorage.getItem('T4');
  document.getElementById('teamOne').style.backgroundColor = color
  document.getElementById('teamTwo').style.backgroundColor = color
  document.getElementById('gamesOne').style.backgroundColor = gamec

@@ -1,3 +1,5 @@
+
+
 let ButtonS1 = document.getElementById("S1");
 let ButtonS2 = document.getElementById("S2");
 let ButtonMS1= document.getElementById("SM1");
@@ -13,6 +15,7 @@ let ResetG2 = document.getElementById("ResetG2");
 let ResetA = document.getElementById("ResetA");
 let remove = document.getElementById("remove");
 let show = document.getElementById("show");
+
 
 
 
@@ -52,10 +55,39 @@ show.addEventListener("click", function() {
 
 
 
-ButtonS1.addEventListener("click", function() {
+ButtonS1.addEventListener("click", function ctrl1() {
     Score1 = Score1 + 1;
     localStorage.setItem('S1', Score1);
 });
+
+//shortcuts
+document.getElementById('sd').addEventListener('keydown', (event) => {
+  
+});
+
+let keysPressed = {};
+
+document.addEventListener('keydown', (event) => {
+   keysPressed[event.key] = true;
+});
+
+
+
+
+ document.addEventListener('keydown', (event) => {
+    keysPressed[event.key] = true;
+ 
+    if (keysPressed['Control'] && event.key == '1') {
+        Score1 = Score1 + 1;
+        localStorage.setItem('S1', Score1);
+    }
+ });
+ 
+ document.addEventListener('keyup', (event) => {
+    delete keysPressed[event.key];
+ });
+
+
 
 ButtonMS1.addEventListener("click", function() {
     Score1 = Score1 - 1;
@@ -82,15 +114,167 @@ ButtonG1.addEventListener("click", function() {
     localStorage.setItem('G1', Games1);
 });
 
+//shortcuts-----------------------------------------------------------------
+document.getElementById('sd2').addEventListener('keydown', (event) => {
+  
+});
+
+let keysPressed2 = {};
+
+document.addEventListener('keydown', (event) => {
+   keysPressed2[event.key] = true;
+});
+
+
+
+
+ document.addEventListener('keydown', (event) => {
+    keysPressed2[event.key] = true;
+ //if
+    if (keysPressed2['Control'] && event.key == '2') {
+        Games1 = Games1 + 1;
+        localStorage.setItem('G1', Games1);
+    }
+ });
+ 
+ document.addEventListener('keyup', (event) => {
+    delete keysPressed2[event.key];
+ });
+//end--------------------------------------------------------------------------
 ButtonS2.addEventListener("click", function() {
     Score2 = Score2 + 1;
     localStorage.setItem('S2', Score2);
 });
 
+//shortcuts-----------------------------------------------------------------
+document.getElementById('sd3').addEventListener('keydown', (event) => {
+  
+});
+
+let keysPressed3 = {};
+
+document.addEventListener('keydown', (event) => {
+   keysPressed3[event.key] = true;
+});
+
+
+
+
+ document.addEventListener('keydown', (event) => {
+    keysPressed3[event.key] = true;
+ //if
+    if (keysPressed3['Control'] && event.key == '3') {
+        Score2 = Score2 + 1;
+        localStorage.setItem('S2', Score2);
+    }
+ });
+ 
+ document.addEventListener('keyup', (event) => {
+    delete keysPressed3[event.key];
+ });
+//end--------------------------------------------------------------------------
+
 ButtonG2.addEventListener("click", function() {
     Games2 = Games2 + 1;
     localStorage.setItem('G2', Games2);
 });
+
+//shortcuts-----------------------------------------------------------------
+document.getElementById('sd4').addEventListener('keydown', (event) => {
+  
+});
+
+let keysPressed4 = {};
+
+document.addEventListener('keydown', (event) => {
+   keysPressed4[event.key] = true;
+});
+
+
+
+
+ document.addEventListener('keydown', (event) => {
+    keysPressed4[event.key] = true;
+ //if
+    if (keysPressed3['Control'] && event.key == '4') {
+        Games2 = Games2 + 1;
+        localStorage.setItem('G2', Games2)
+    }
+ });
+ 
+ document.addEventListener('keyup', (event) => {
+    delete keysPressed4[event.key];
+ });
+//end--------------------------------------------------------------------------
+
+
+
+//shortcuts-----------------------------------------------------------------
+document.getElementById('sd5').addEventListener('keydown', (event) => {
+  
+});
+
+let keysPressed5 = {};
+
+document.addEventListener('keydown', (event) => {
+   keysPressed5[event.key] = true;
+});
+
+
+
+
+ document.addEventListener('keydown', (event) => {
+    keysPressed5[event.key] = true;
+ //if
+    if (keysPressed5['Control'] && event.key == '5') {
+        Score1 = 0
+        localStorage.setItem('S1', Score1);
+
+        Score2 = 0
+    
+        localStorage.setItem('S2', Score2);
+
+
+    }
+ });
+ 
+ document.addEventListener('keyup', (event) => {
+    delete keysPressed5[event.key];
+ });
+//end--------------------------------------------------------------------------
+
+
+
+//shortcuts-----------------------------------------------------------------
+document.getElementById('sd6').addEventListener('keydown', (event) => {
+  
+});
+
+let keysPressed6 = {};
+
+document.addEventListener('keydown', (event) => {
+   keysPressed5[event.key] = true;
+});
+
+
+
+
+ document.addEventListener('keydown', (event) => {
+    keysPressed6[event.key] = true;
+ //if
+    if (keysPressed6['Control'] && event.key == '6') {
+        Games1 = 0
+        localStorage.setItem('G1', Games1);
+        Games2 = 0
+        localStorage.setItem('G2', Games2);
+
+    }
+ });
+ 
+ document.addEventListener('keyup', (event) => {
+    delete keysPressed6[event.key];
+ });
+//end--------------------------------------------------------------------------
 
 Reset1.addEventListener("click", function() {
     Score1 = 0
@@ -153,7 +337,6 @@ function passcolor(){
     return false;
 
 }
-
 
 
 
